@@ -1,4 +1,4 @@
-# Rebanking Challenge with React native and Typescript
+# Rebanking Challenge with React native and TypeScript
 
 ## Description 
 In this application you can see a List of products to which you can execute a click to see the complete detail of it.
