@@ -14,7 +14,6 @@ Libraries used: </br>
 [Vector Icons](https://www.npmjs.com/package/react-native-vector-icons) <br>
 
 # Demo:
-
 ![demo-gif](https://user-images.githubusercontent.com/70117105/151248386-bc934e79-603c-4077-93a8-a0674aae5105.gif)
 
 
