@@ -1,13 +1,16 @@
-<h1>DESAFIO REBA</h1>
+# Rebanking Challenge with React native and Typescript
 
-<p># Aclaración: la app funciona en Android. No fue probada en un equipo Mac.</p>
-<p># Clonar repositorio</p>
-<p># Instalar dependencias con npm install</p>
-<p># Correr la app con npx react-native run-android</p>
+## Description 
+In this application you can see a List of products to which you can execute a click to see the complete detail of it.
 
-<p># Descripción: Listado de productos que permite navegar al detalle de cada uno.</p>
+## Setup
+1- Clone repository `git clone https://github.com/MarceeloDominguez/challenge-reba.git`</br>
+2- Install dependencies with `npm install` </br>
+3- Run App with  `npx react-native run-android`
 
-<h2>DEMO</h2>
+## More Comments:
+
+[React Navigation V6](https://reactnavigation.org/docs/getting-started/) <br>
 
 https://user-images.githubusercontent.com/70117105/151200224-889b43d1-efb6-4abb-b413-d4eb43617547.mp4
 
