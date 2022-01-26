@@ -2,6 +2,7 @@
 
 ## Description 
 In this application you can see a List of products to which you can execute a click to see the complete detail of it.
+This application was only configured to be used on Android.
 
 ## Setup
 1- Clone repository `git clone https://github.com/MarceeloDominguez/challenge-reba.git`</br>
