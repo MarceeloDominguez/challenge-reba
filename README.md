@@ -6,3 +6,7 @@
 <p># Correr la app con npx react-native run-android</p>
 
 <p># Descripción: Listado de productos que permite navegar al detalle de cada uno.</p>
+
+
+https://user-images.githubusercontent.com/70117105/151200224-889b43d1-efb6-4abb-b413-d4eb43617547.mp4
+
