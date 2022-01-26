@@ -1,7 +1,7 @@
 # Rebanking Challenge with React native and TypeScript
 
 ## Description 
-In this application you can see a List of products to which you can execute a click to see the complete detail of it.
+In this application you can see a List of products to which you can execute a click to see the complete detail of it.</br>
 This application was only configured to be used on Android.
 
 ## Setup
