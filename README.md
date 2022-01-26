@@ -16,8 +16,6 @@ Libraries used: </br>
 # Demo:
 <img src="https://user-images.githubusercontent.com/70117105/151248628-dc2a4cb0-d734-41f7-80b9-55e507a13eae.gif" width="400">
 
-https://user-images.githubusercontent.com/70117105/151200224-889b43d1-efb6-4abb-b413-d4eb43617547.mp4
-
 ## More Comments:
 Pending development: </br>
 1- Create an option to check/uncheck list items like
