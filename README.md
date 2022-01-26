@@ -16,6 +16,7 @@ persist between sessions of use of the application. </br>
 2- Create at least one unit test in Jest.
 
 Libraries used: </br>
+<a href='https://reactnavigation.org/docs/getting-started/'></a>
 [React Navigation V6](https://reactnavigation.org/docs/getting-started/) <br>
 [Vector Icons](https://www.npmjs.com/package/react-native-vector-icons) <br>
 
