@@ -18,7 +18,7 @@ export default function Navigation() {
         name="HomeScreen"
         component={HomeScreen}
         options={{
-          title: 'Lista Products',
+          title: 'List Products',
           headerTitleAlign: 'center',
           contentStyle: {backgroundColor: '#fff'},
           headerShadowVisible: false,
