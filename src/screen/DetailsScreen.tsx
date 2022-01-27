@@ -15,15 +15,16 @@ import Loading from '../components/Loading';
 import Error from '../components/Error';
 import Icons from 'react-native-vector-icons/Ionicons';
 import Button from '../components/Button';
+import {useFavoriteContext} from '../context/FavoriteContext';
 
 interface Props extends StackScreenProps<RootStackParams, 'DetailsScreen'> {}
 
 const screenHeight = Dimensions.get('screen').height * 0.6;
 
 export default function DetailsScreen({route, navigation}: Props) {
-  const [changeColorIcon, setChangeColorIcon] = useState(false);
+  const {isFavorite, toggleFavorite} = useFavoriteContext();
   const productItem = route.params;
-  const {title, price, description, image, category, loading, error} =
+  const {title, price, description, image, category, id, loading, error} =
     useDetails(productItem.id);
 
   if (loading) return <Loading />;
@@ -50,10 +51,10 @@ export default function DetailsScreen({route, navigation}: Props) {
         <View style={styles.favorite}>
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => setChangeColorIcon(!changeColorIcon)}>
+            onPress={() => toggleFavorite(id!)}>
             <Icons
               name="heart"
-              color={changeColorIcon ? 'red' : '#ccc'}
+              color={isFavorite(id!) ? 'red' : '#ccc'}
               size={24}
             />
           </TouchableOpacity>

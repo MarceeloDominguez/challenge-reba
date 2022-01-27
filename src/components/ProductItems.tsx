@@ -6,11 +6,12 @@ import Icons from 'react-native-vector-icons/Ionicons';
 
 interface Props {
   item: Products;
+  onPressFavorite: (id: number) => void;
+  favorite: boolean;
 }
 
-export default function ProductItems({item}: Props) {
-  const [changeColorIcon, setChangeColorIcon] = useState(false);
-  const {title, image, price} = item;
+export default function ProductItems({item, onPressFavorite, favorite}: Props) {
+  const {title, image, price, id} = item;
   const navigation = useNavigation();
 
   return (
@@ -39,15 +40,13 @@ export default function ProductItems({item}: Props) {
             }}>
             <Text style={styles.price}>$ {price}</Text>
             <TouchableOpacity
-              onPress={() => setChangeColorIcon(!changeColorIcon)}
+              onPress={() => {
+                onPressFavorite(id);
+              }}
               style={{
                 alignSelf: 'flex-end',
               }}>
-              <Icons
-                name="heart"
-                color={changeColorIcon ? 'red' : '#ccc'}
-                size={24}
-              />
+              <Icons name="heart" color={favorite ? 'red' : '#ccc'} size={24} />
             </TouchableOpacity>
           </View>
         </View>
