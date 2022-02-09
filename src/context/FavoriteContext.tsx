@@ -27,8 +27,6 @@ export default function FavoriteContext({children}: any) {
     AsyncStorage.setItem('favorites', stringifyIds);
   }, [ids]);
 
-  console.log(ids);
-
   const removeFavorite = (id: number) => {
     const tempIds = ids.filter(i => i !== id);
     setIds(tempIds);
@@ -39,8 +37,6 @@ export default function FavoriteContext({children}: any) {
   };
 
   const toggleFavorite = (id: number) => {
-    console.log(id, 'ada');
-
     if (isFavorite(id)) {
       removeFavorite(id);
     } else {

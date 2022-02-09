@@ -7,7 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParams} from '../navigation/Navigation';
 import useDetails from '../hooks/useDetails';
@@ -76,7 +76,7 @@ export default function DetailsScreen({route, navigation}: Props) {
         <Text style={styles.price}>$ {price}</Text>
       </View>
 
-      <View style={{flexDirection: 'row'}}>
+      <View style={styles.containerButton}>
         <Button
           title="Add cart"
           backgroundColor="#1F1F1F"
@@ -153,5 +153,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginHorizontal: 16,
     marginBottom: 16,
+  },
+  containerButton: {
+    flexDirection: 'row',
   },
 });

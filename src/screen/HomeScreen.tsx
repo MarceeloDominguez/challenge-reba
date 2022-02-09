@@ -8,13 +8,11 @@ import {useFavoriteContext} from '../context/FavoriteContext';
 
 export default function HomeScreen() {
   const {listProducts, loading, error} = useProducts();
+  const {isFavorite} = useFavoriteContext();
 
-  const {isFavorite, toggleFavorite} = useFavoriteContext();
-
-  const favorites = listProducts?.filter(p => isFavorite(p.id));
-  const noFavorites = listProducts?.filter(p => !isFavorite(p.id));
-
-  const allProducts = favorites?.concat(noFavorites ?? []);
+  const orderedList = listProducts?.sort((a, b) =>
+    isFavorite(a.id) > isFavorite(b.id) ? -1 : 0,
+  );
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -23,15 +21,9 @@ export default function HomeScreen() {
     <View>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <FlatList
-        data={allProducts}
+        data={orderedList}
         keyExtractor={(item, index) => index.toString()}
-        renderItem={({item}) => (
-          <ProductItems
-            item={item}
-            onPressFavorite={toggleFavorite}
-            favorite={isFavorite(item.id)}
-          />
-        )}
+        renderItem={({item}) => <ProductItems item={item} />}
         showsVerticalScrollIndicator={false}
       />
     </View>
