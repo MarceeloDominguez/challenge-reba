@@ -1,7 +1,7 @@
 # Rebanking Challenge with React native and TypeScript
 
 ## Description 
-In this application you can see a List of products to which you can execute a click to see the complete detail of it.</br>
+In this application you can see a List of products to which you can execute a click to see the complete detail of it. They can be bookmarked and saved to async-storage</br>
 This application was only configured to be used on Android.
 
 ## Setup
