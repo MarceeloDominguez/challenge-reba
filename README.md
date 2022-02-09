@@ -18,8 +18,5 @@ Libraries used: </br>
 
 ## More Comments:
 Pending development: </br>
-1- Create an option to check/uncheck list items like
-favourites. These elements should appear at the beginning of the list and
-persist between sessions of use of the application. </br>
-2- Create at least one unit test in Jest.
+1- Create at least one unit test in Jest.
 
