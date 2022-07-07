@@ -1,17 +1,18 @@
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {Products} from '../interfaces/productsInterfaces';
 import {CommonActions, useNavigation} from '@react-navigation/native';
 import Icons from 'react-native-vector-icons/Ionicons';
+import {useFavoriteContext} from '../context/FavoriteContext';
 
 interface Props {
   item: Products;
 }
 
 export default function ProductItems({item}: Props) {
-  const [changeColorIcon, setChangeColorIcon] = useState(false);
-  const {title, image, price} = item;
+  const {title, image, price, id} = item;
   const navigation = useNavigation();
+  const {isFavorite, toggleFavorite} = useFavoriteContext();
 
   return (
     <TouchableOpacity
@@ -39,13 +40,15 @@ export default function ProductItems({item}: Props) {
             }}>
             <Text style={styles.price}>$ {price}</Text>
             <TouchableOpacity
-              onPress={() => setChangeColorIcon(!changeColorIcon)}
+              onPress={() => {
+                toggleFavorite(id);
+              }}
               style={{
                 alignSelf: 'flex-end',
               }}>
               <Icons
                 name="heart"
-                color={changeColorIcon ? 'red' : '#ccc'}
+                color={isFavorite(id) ? 'red' : '#ccc'}
                 size={24}
               />
             </TouchableOpacity>
